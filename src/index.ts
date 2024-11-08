@@ -1,5 +1,5 @@
 // src/index.ts
-import PreviewCard from './components/PreviewCard';
+import ImageZoom from './components/ImageZoom';
 
-export { PreviewCard };
-export default PreviewCard;
+export { ImageZoom };
+export default ImageZoom;
