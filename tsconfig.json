@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "target": "ES6",
     "module": "ESNext",
     "declaration": true,
-    "outDir": "./dist/es6",
+    "outDir": "./dist",
     "strict": true,
+    "types": ["cypress", "node"],
     "esModuleInterop": true,
     "moduleResolution": "node",
     "lib": ["ES6", "DOM"],
     "sourceMap": false
   },
-  "include": ["src/**/*"],
+  "include": ["cypress/**/*.ts", "src/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
