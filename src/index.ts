@@ -1,10 +1,9 @@
-// src/index.ts
-import ImageZoom from './components/ImageZoom';
+// // src/index.ts
+// import ImageZoom from "./components/ImageZoom";
 
-export { ImageZoom };
-export default ImageZoom;
+// export { ImageZoom };
 
-// 사용 코드 
+// 사용 코드
 // import React from 'react';
 // import './App.css';
 // import ImageZoom from '../src/components/ImageZoom.tsx';

@@ -9,7 +9,7 @@
     "start": "react-scripts start",
     "build:es5": "rollup -c --environment FORMAT:es5",
     "build:es6": "rollup -c --environment FORMAT:es6",
-    "build": "npm run build:es5 && npm run build:es6 && rollup -c",
+    "build": "npm run build:es5 && npm run build:es6",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -43,5 +43,17 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.80.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
