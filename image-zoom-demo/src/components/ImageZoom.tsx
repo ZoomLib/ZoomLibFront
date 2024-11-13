@@ -7,6 +7,10 @@ interface ImageZoomProps {
   zoomAreaDimensions?: { width: number; height: number }; // 확대 영역의 너비와 높이
   containerWidth?: string; // 컨테이너 너비 (단위 포함 가능, 기본값 100%)
   containerHeight?: string; // 컨테이너 높이 (단위 포함 가능, 기본값 100%)
+  border?: string; // 확대 영역의 테두리 스타일
+  borderColor?: string; // 확대 영역의 테두리 색상
+  borderRadius?: string; // 확대 영역의 모서리 반경
+  backgroundColor?: string; // 확대 영역의 배경 색상
 }
 
 const ImageZoom = ({
@@ -15,6 +19,10 @@ const ImageZoom = ({
   zoomAreaDimensions = { width: 200, height: 200 },
   containerWidth = "100%", // 기본값을 100%로 설정
   containerHeight = "100%", // 기본값을 100%로 설정
+  border = "1px solid rgba(0, 0, 0, 0.3)", // 기본 테두리 스타일
+  borderColor = "rgba(0, 0, 0, 0.3)", // 기본 테두리 색상
+  borderRadius = "50%", // 기본 모서리 반경
+  backgroundColor = "white", // 기본 배경 색상
 }: ImageZoomProps) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -91,7 +99,10 @@ const ImageZoom = ({
               containerSize.width - zoomAreaDimensions.width
             ),
             pointerEvents: "none",
-            border: "1px solid rgba(0, 0, 0, 0.3)",
+            border: border,
+            borderColor: borderColor,
+            borderRadius: borderRadius,
+            backgroundColor: backgroundColor,
             boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
           }}
         >
