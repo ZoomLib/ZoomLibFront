@@ -4,14 +4,14 @@
     "target": "ES6",
     "module": "ESNext",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./dist/es6",
     "strict": true,
-    "types": ["cypress", "node"],
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "types": ["node"],
     "lib": ["ES6", "DOM"],
     "sourceMap": false
   },
-  "include": ["cypress/**/*.ts", "src/**/*.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"]
 }

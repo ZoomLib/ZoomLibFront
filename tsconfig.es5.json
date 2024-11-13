@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "target": "ES5",
     "module": "ESNext",
     "declaration": true,
@@ -7,6 +8,7 @@
     "strict": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
+    "types": ["node"],
     "lib": ["ES5", "DOM"],
     "sourceMap": false
   },
