@@ -43,18 +43,30 @@ yarn add dh-zoom
 
 ```
 import React from "react";
-import ImageZoom from "dh-zoom";
 import "./App.css";
+import { ImageZoom } from "../src"; // ImageZoom import (index.tsx에서 export된 컴포넌트)
 
-const App = () => {
+function App() {
   return (
-    <div className="app-container">
-      <ImageZoom src="/path/to/your/image.jpg" />
+    <div className="App">
+      <h1>Image Zoom Demo</h1>
+      <ImageZoom
+        src="https://via.placeholder.com/600x400" // 이미지 URL
+        zoomLevel={3} // 확대 비율 (기본값: 2)
+        zoomAreaDimensions={{ width: 200, height: 200 }} // 확대 영역의 크기
+        containerWidth="600px" // 컨테이너의 너비
+        containerHeight="400px" // 컨테이너의 높이
+        border="2px solid rgba(0, 0, 0, 0.5)" // 확대 영역의 테두리 스타일
+        borderColor="rgba(0, 0, 0, 0.5)" // 확대 영역의 테두리 색상
+        borderRadius="10px" // 확대 영역의 모서리 반경
+        backgroundColor="rgba(255, 255, 255, 0.8)" // 확대 영역의 배경 색상
+      />
     </div>
   );
-};
+}
 
 export default App;
+
 ```
 ---
 
