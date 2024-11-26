@@ -12,11 +12,9 @@ With simple setup and various customization options, it can be used for product 
 3. [Usage](#🛠️-usage)  
    - [Basic Example](#basic-example)  
 4. [Key Features](#🎯-key-features)  
-5. [API Reference](#📖-api-reference)  
-6. [Customization](#🎨-customization)  
-7. [FAQ](#❓-faq)  
-8. [Contributing](#🤝-contributing)  
-9. [License](#📄-license)  
+5. [API Reference](#📖-api-reference)    
+6. [Contributing](#🤝-contributing)  
+7. [License](#📄-license)  
 
 ---
 
