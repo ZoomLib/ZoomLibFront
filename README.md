@@ -1,6 +1,6 @@
 # dh-zoom
 
-**dh-zoom** is a React-based image zoom preview library that enlarges specific parts of an image when hovered over.  
+**dh-zoom** is a React library for image zoom previews, allowing users to hover over an image to view a magnified portion of it.
 With simple setup and various customization options, it can be used for product image zooming on e-commerce websites, gallery image zooming, and many other purposes.
 
 ---
@@ -111,7 +111,6 @@ Easily apply with minimal setup.
 
 Create an issue or submit a pull request to contribute to the project.
 When fixing bugs or adding features, please include relevant test code.
-For more details on contributing, refer to CONTRIBUTING.md.
 
 ---
 
