@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/ImageZoom.scss';
+import React, { useState } from "react";
+import "../styles/ImageZoom.scss";
 
 interface ImageZoomProps {
   src: string; // 이미지 URL
@@ -23,8 +23,8 @@ const ImageZoom = ({
   zoomAreaDimensions = { width: 100, height: 100 },
   enlargedDimensions = { width: 400, height: 400 },
   enlargedOverlayPosition = { top: 50, left: 50 },
-  zoomAreaBorder = '2px solid rgba(255, 255, 255, 0.7)', // 기본 확대 영역 테두리 스타일
-  enlargedBorder = '2px solid rgba(255, 255, 255, 0.7)' // 기본 확대된 이미지 테두리 스타일
+  zoomAreaBorder = "2px solid rgba(255, 255, 255, 0.7)", // 기본 확대 영역 테두리 스타일
+  enlargedBorder = "2px solid rgba(255, 255, 255, 0.7)", // 기본 확대된 이미지 테두리 스타일
 }: ImageZoomProps) => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -68,13 +68,13 @@ const ImageZoom = ({
             style={{
               width: `${zoomAreaDimensions.width}px`,
               height: `${zoomAreaDimensions.height}px`,
-              overflow: 'hidden',
-              position: 'absolute',
+              overflow: "hidden",
+              position: "absolute",
               top: mousePosition.y - zoomAreaDimensions.height / 2,
               left: mousePosition.x - zoomAreaDimensions.width / 2,
               border: zoomAreaBorder, // 사용자 정의 zoomAreaBorder 사용
-              backgroundColor: 'rgba(0, 0, 0, 0.3)',
-              pointerEvents: 'none',
+              backgroundColor: "rgba(0, 0, 0, 0.3)",
+              pointerEvents: "none",
             }}
           >
             <img
@@ -82,15 +82,19 @@ const ImageZoom = ({
               alt="Zoomed Area"
               style={{
                 transform: `scale(${zoomLevel})`,
-                transformOrigin: `${(mousePosition.x / zoomAreaDimensions.width) * 100}% ${(mousePosition.y / zoomAreaDimensions.height) * 100}%`,
-                transition: smoothZoom ? `transform ${smoothZoomDuration}s ease` : 'none',
-                position: 'relative',
+                transformOrigin: `${
+                  (mousePosition.x / zoomAreaDimensions.width) * 100
+                }% ${(mousePosition.y / zoomAreaDimensions.height) * 100}%`,
+                transition: smoothZoom
+                  ? `transform ${smoothZoomDuration}s ease`
+                  : "none",
+                position: "relative",
               }}
             />
           </div>
         )}
       </div>
-        {/* 확대한 이미지  */}
+      {/* 확대한 이미지  */}
       {isEnlarged && (
         <div className="enlarged-overlay" onClick={handleCloseEnlarge}>
           <div
@@ -98,16 +102,16 @@ const ImageZoom = ({
             style={{
               width: `${enlargedDimensions.width}px`,
               height: `${enlargedDimensions.height}px`,
-              overflow: 'hidden',
-              position: 'absolute',
+              overflow: "hidden",
+              position: "absolute",
               top: `${enlargedOverlayPosition.top}%`,
               left: `${enlargedOverlayPosition.left}%`,
-              transform: 'translate(-50%, -50%)',
+              transform: "translate(-50%, -50%)",
               border: enlargedBorder, // 사용자 정의 enlargedBorder 사용
-              backgroundColor: 'rgba(0, 0, 0, 0.9)',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center'
+              backgroundColor: "rgba(0, 0, 0, 0.9)",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <img
@@ -116,8 +120,12 @@ const ImageZoom = ({
               className="enlarged-image"
               style={{
                 transform: `scale(${zoomLevel})`,
-                transformOrigin: `${(clickPosition.x / enlargedDimensions.width) * 100}% ${(clickPosition.y / enlargedDimensions.height) * 100}%`,
-                transition: smoothZoom ? `transform ${smoothZoomDuration}s ease` : 'none',
+                transformOrigin: `${
+                  (clickPosition.x / enlargedDimensions.width) * 100
+                }% ${(clickPosition.y / enlargedDimensions.height) * 100}%`,
+                transition: smoothZoom
+                  ? `transform ${smoothZoomDuration}s ease`
+                  : "none",
               }}
             />
           </div>

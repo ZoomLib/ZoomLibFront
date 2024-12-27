@@ -1,7 +1,7 @@
 {
-  "name": "my-library",
-  "version": "1.0.0",
-  "description": "lib",
+  "name": "dh-zoom",
+  "version": "1.0.3",
+  "description": "ImageZoom Lib",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -42,8 +42,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sass": "^1.80.6"
+    "react-dom": "^18.3.1"
   },
   "browserslist": {
     "production": [
@@ -56,5 +55,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "files": [
+    "dist",
+    "src",
+    "index.ts",
+    "README.md"
+  ]
 }
